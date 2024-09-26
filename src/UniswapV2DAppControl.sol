@@ -212,7 +212,7 @@ contract UniswapV2DAppControl is DAppControl {
         return REWARD_TOKEN;
     }
 
-    function getBidValue(SolverOperation calldata solverOp) public view override returns (uint256) {
+    function getBidValue(SolverOperation calldata solverOp) public pure override returns (uint256) {
         return solverOp.bidAmount;
     }
 }
