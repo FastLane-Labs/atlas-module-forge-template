@@ -19,8 +19,8 @@ import { BaseTest } from "@atlas-test/base/BaseTest.t.sol";
 import { AccountingMath } from "@atlas/libraries/AccountingMath.sol";
 
 // Import the contract under test and related Uniswap V2 router interfaces
-import { UniswapV2DAppControl } from "src/UniswapV2DAppControl.sol";
-import { IUniswapV2Router01, IUniswapV2Router02 } from "src/interfaces/IUniswapV2Router.sol";
+import { UniswapV2DAppControl } from "../src/UniswapV2DAppControl.sol";
+import { IUniswapV2Router01, IUniswapV2Router02 } from "../src/interfaces/IUniswapV2Router.sol";
 
 // Import helper contracts for building transactions during testing
 import { TxBuilder } from "@atlas/helpers/TxBuilder.sol";
@@ -77,7 +77,7 @@ contract UniswapV2DAppControlTest is BaseTest {
     function test_UniswapV2DAppControl_swapWETHForDAI() public {
         // Initialize structures to hold user and solver operations as well as DApp operation details.
         UserOperation memory userOp;
-        SolverOperation;
+        SolverOperation[] memory solverOps = new SolverOperation[](1);
         DAppOperation memory dAppOp;
 
         // ===========================
@@ -98,7 +98,7 @@ contract UniswapV2DAppControlTest is BaseTest {
         vm.label(address(executionEnvironment), "EXECUTION ENV");
 
         // Define the token swap path for Uniswap V2: from WETH to DAI.
-        address;
+        address[] memory path = new address[](2);
         path[0] = WETH_ADDRESS; // Starting token: Wrapped ETH
         path[1] = DAI_ADDRESS; // Target token: DAI
 

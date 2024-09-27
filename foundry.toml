@@ -17,6 +17,7 @@
 [profile.ci]
   fuzz = { runs = 10_000 }
   verbosity = 2
+  ignore_warnings = true
 
 [fmt]
   bracket_spacing = true
