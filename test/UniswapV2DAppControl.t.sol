@@ -19,8 +19,8 @@ import { BaseTest } from "@atlas-test/base/BaseTest.t.sol";
 import { AccountingMath } from "@atlas/libraries/AccountingMath.sol";
 
 // Import the contract under test and related Uniswap V2 router interfaces
-import { UniswapV2DAppControl } from "src/UniswapV2DAppControl.sol";
-import { IUniswapV2Router01, IUniswapV2Router02 } from "src/interfaces/IUniswapV2Router.sol";
+import { UniswapV2DAppControl } from "../src/UniswapV2DAppControl.sol";
+import { IUniswapV2Router01, IUniswapV2Router02 } from "../src/interfaces/IUniswapV2Router.sol";
 
 // Import helper contracts for building transactions during testing
 import { TxBuilder } from "@atlas/helpers/TxBuilder.sol";

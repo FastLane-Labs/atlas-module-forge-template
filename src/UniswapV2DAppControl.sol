@@ -12,7 +12,7 @@ import { UserOperation } from "@atlas/types/UserOperation.sol";
 import { SolverOperation } from "@atlas/types/SolverOperation.sol";
 
 // Uniswap Imports
-import { IUniswapV2Router01, IUniswapV2Router02 } from "src/interfaces/IUniswapV2Router.sol";
+import { IUniswapV2Router01, IUniswapV2Router02 } from "./interfaces/IUniswapV2Router.sol";
 
 /*
 * @title UniswapV2DAppControl
