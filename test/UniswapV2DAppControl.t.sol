@@ -98,7 +98,7 @@ contract UniswapV2DAppControlTest is BaseTest {
         vm.label(address(executionEnvironment), "EXECUTION ENV");
 
         // Define the token swap path for Uniswap V2: from WETH to DAI.
-        address;
+        address[] memory path = new address[](2);
         path[0] = WETH_ADDRESS; // Starting token: Wrapped ETH
         path[1] = DAI_ADDRESS; // Target token: DAI
 
@@ -192,6 +192,7 @@ contract UniswapV2DAppControlTest is BaseTest {
         // - solverContract: Address of the deployed BasicV2Solver contract
         // - bidAmount: 0.1 WETH (1e17 wei) as the bid for the backrun opportunity
         // - value: 0 (no ETH is sent with the solver operation)
+        SolverOperation[] memory solverOps = new SolverOperation[](1);
         solverOps[0] = txBuilder.buildSolverOperation({
             userOp: userOp,
             solverOpData: solverOpData,
