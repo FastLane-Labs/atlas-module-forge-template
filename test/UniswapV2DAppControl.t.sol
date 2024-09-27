@@ -77,7 +77,7 @@ contract UniswapV2DAppControlTest is BaseTest {
     function test_UniswapV2DAppControl_swapWETHForDAI() public {
         // Initialize structures to hold user and solver operations as well as DApp operation details.
         UserOperation memory userOp;
-        SolverOperation;
+        SolverOperation[] memory solverOps = new SolverOperation[](1);
         DAppOperation memory dAppOp;
 
         // ===========================
@@ -192,7 +192,6 @@ contract UniswapV2DAppControlTest is BaseTest {
         // - solverContract: Address of the deployed BasicV2Solver contract
         // - bidAmount: 0.1 WETH (1e17 wei) as the bid for the backrun opportunity
         // - value: 0 (no ETH is sent with the solver operation)
-        SolverOperation[] memory solverOps = new SolverOperation[](1);
         solverOps[0] = txBuilder.buildSolverOperation({
             userOp: userOp,
             solverOpData: solverOpData,
