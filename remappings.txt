@@ -1,6 +1,5 @@
 forge-std/=lib/forge-std/src/
 @atlas/=lib/atlas/src/contracts/
 @atlas-test/=lib/atlas/test/
-openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/
 openzeppelin-contracts/=lib/openzeppelin-contracts/
 solady/=lib/solady/src/
